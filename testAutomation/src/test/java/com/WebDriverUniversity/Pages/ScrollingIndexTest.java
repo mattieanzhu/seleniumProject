@@ -1,25 +1,22 @@
 package com.WebDriverUniversity.Pages;
 
-import org.junit.Test;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class ScrollingIndexTest extends FunctionalTest {
-	@Test
 	@Given("^user opens scrolling index page$")
     public void user_opens_scrolling_index_page() throws Throwable {
 		driver.get("http://webdriveruniversity.com/Scrolling/index.html");
 		ScrollingIndex scrollingIndex = new ScrollingIndex(driver);
 		scrollingIndex.scrollPage();
 		assertTrue(scrollingIndex.isInitialized());
-		assertEquals("Well done for scrolling to me!", scrollingIndex.confirmationHeaderOne());
-		assertEquals("1 Entries", scrollingIndex.confirmationHeaderTwo());
-		assertEquals("1 Entries", scrollingIndex.confirmationHeaderThree());
-		assertEquals("X: 577Y: 816", scrollingIndex.confirmationHeaderFour());
+		assertEquals("Well done for scrolling to me!", scrollingIndex.isConfirmationHeaderOne());
+		assertEquals("1 Entries", scrollingIndex.isConfirmationHeaderTwo());
+		assertEquals("1 Entries", scrollingIndex.isConfirmationHeaderThree());
+		assertEquals("X: 577Y: 816", scrollingIndex.isConfirmationHeaderFour());
     }
 
     @When("^user scrolls to elements$")

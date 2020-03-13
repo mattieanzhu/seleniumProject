@@ -1,14 +1,12 @@
 package com.WebDriverUniversity.Pages;
 
 import com.WebDriverUniversity.Pages.AutoCompleteTextField;
-import org.junit.Test;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.And;
 
 public class AutoCompleteTextFieldTest extends FunctionalTest { 
-	@Test
 	@Given("^user opens Autocomplete-TextField page with valid data \"([^\"]*)\" and \"([^\"]*)\"$")
     public void user_opens_autocompletetextfield_page_with_valid_data_something_and_something() throws Throwable {
         driver.get("http://webdriveruniversity.com/Autocomplete-TextField/autocomplete-textfield.html");

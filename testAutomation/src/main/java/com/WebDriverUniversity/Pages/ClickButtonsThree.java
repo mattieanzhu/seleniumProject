@@ -21,7 +21,7 @@ public class ClickButtonsThree extends PageObject {
 		buttonThree.click();
 	}
 	
-	public boolean confirmationHeader() {
+	public boolean isConfirmationHeader() {
 		if(ExpectedConditions.alertIsPresent()!=null) {
 			return true;
 		}

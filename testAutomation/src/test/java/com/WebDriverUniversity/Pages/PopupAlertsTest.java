@@ -1,13 +1,10 @@
 package com.WebDriverUniversity.Pages;
 
-import org.junit.Test;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class PopupAlertsTest extends FunctionalTest {
-	@Test
 	@Given("^user opens Pop\\-up alerts page$")
 	public void user_opens_popup_alerts_page() throws Throwable {
 		driver.get("http://webdriveruniversity.com/Popup-Alerts/index.html");

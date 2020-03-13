@@ -1,6 +1,8 @@
 package com.WebDriverUniversity.Pages;
 
 import org.openqa.selenium.WebDriver;
+
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -44,7 +46,7 @@ public class ContactUs extends PageObject {
 		return receipt.isDisplayed();
 	}
 	
-	public String confirmationHeader() {
+	public String isConfirmationHeader() {
 		return receipt.getText();
 	}
 

@@ -1,6 +1,4 @@
 package com.WebDriverUniversity.Pages;
-
-import org.junit.Test;
 import com.WebDriverUniversity.Pages.ContactUs;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,15 +9,13 @@ import static org.junit.Assert.assertTrue;
 
 
 public class ContactUsTest extends FunctionalTest {
-	
-	@Test
-	@Given("^user opens contact\\-us page$")
+   @Given("^user opens contact\\-us page$")
    public void user_opens_contactus_page() throws Throwable {
 		driver.get("http://webdriveruniversity.com/Contact-Us/contactus.html");
 		ContactUs contactUs = new ContactUs(driver);
 		contactUs.enterContactUs("Anzhu", "Mattie", "anzhumattie35@gmail.com", "test");
 		assertTrue(contactUs.isInitialized());
-		assertEquals("Thank You for your Message!", contactUs.confirmationHeader());
+		assertEquals("Thank You for your Message!", contactUs.isConfirmationHeader());
     }
 
     @When("^user inputs valid data for \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and (.+)$")

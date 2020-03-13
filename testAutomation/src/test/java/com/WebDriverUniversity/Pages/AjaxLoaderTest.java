@@ -1,26 +1,21 @@
 package com.WebDriverUniversity.Pages;
 
 import com.WebDriverUniversity.Pages.AjaxLoader;
-
-
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.And;
-
 import static org.junit.Assert.assertTrue;
 
-import org.junit.Test;
+
 
 public class AjaxLoaderTest extends FunctionalTest {
-	@Test
 	@Given("^user opens ajax\\-loader page$")
 	public void user_opens_ajaxloader_page() throws Throwable {
 		driver.get("http://webdriveruniversity.com/Ajax-Loader/index.html");
 		AjaxLoader ajaxLoader = new AjaxLoader(driver);
 		ajaxLoader.waitAjaxLoader();
-		assertTrue(ajaxLoader.confirmationHeader());
+		assertTrue(ajaxLoader.isConfirmationHeader());
 	}
 
 	@When("^user waits for button to load$")

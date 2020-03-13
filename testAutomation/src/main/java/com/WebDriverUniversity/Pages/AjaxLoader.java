@@ -1,8 +1,6 @@
 package com.WebDriverUniversity.Pages;
 
 import org.openqa.selenium.By;
-
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,7 +23,7 @@ public class AjaxLoader extends PageObject {
 		clickMe.click();
 	}
 	
-	public boolean confirmationHeader() {
+	public boolean isConfirmationHeader() {
 		if(ExpectedConditions.alertIsPresent() != null) {
 			return true;
 		}

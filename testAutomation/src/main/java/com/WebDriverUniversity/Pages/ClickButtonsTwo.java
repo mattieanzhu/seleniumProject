@@ -21,7 +21,7 @@ public class ClickButtonsTwo extends PageObject {
 		buttonTwo.click();
 	}
 	
-	public boolean confirmationHeader() {
+	public boolean isConfirmationHeader() {
 		if(ExpectedConditions.alertIsPresent()!=null) {
 			return true;
 		}

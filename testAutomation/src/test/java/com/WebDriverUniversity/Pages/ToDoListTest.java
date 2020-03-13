@@ -1,6 +1,5 @@
 package com.WebDriverUniversity.Pages;
 
-import org.junit.Test;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,7 +8,6 @@ import static org.junit.Assert.assertTrue;
 
 
 public class ToDoListTest extends FunctionalTest {
-	@Test
 	@Given("^user opens to\\-do\\-list page$")
     public void user_opens_todolist_page() throws Throwable {
     	driver.get("http://webdriveruniversity.com/To-Do-List/index.html");

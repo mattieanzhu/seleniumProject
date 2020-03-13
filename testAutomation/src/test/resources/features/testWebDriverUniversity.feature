@@ -68,3 +68,23 @@ Scenario Outline: open webdriveruniversity Autocomplete-TextField page and selec
 	Examples:
 	| inputString| completeString|
 	| a| Apple|
+	
+Scenario: open webdriveruniversity Dropdown-Checkboxes-RadioButtons page and select dropdown
+	Given user opens Dropdown-Checkboxes-RadioButtons page
+	When user opens Dropdown Menu
+	Then user selects dropdown option
+	
+
+Scenario: open webdriveruniversity Actions page and drag element to target, double click, and hold button
+	Given user opens Actions page
+	When user clicks on DRAG ME TO MY TARGET button
+	And user drags button to target
+	And user double clicks Double Click Me button
+	Then holds and relases Click and Hold! button
+	
+Scenario: open webdriveruniversity File-upload page and upload file
+	Given user opens File-Upload page
+	When user clicks Choose File button
+	And user selects file to upload
+	Then user clicks Submit button
+	
